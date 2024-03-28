@@ -8,14 +8,14 @@ interface SocialItem {
 const SocialShare: SocialItem[] = [
   {
     iconName: "fa fa-facebook",
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/cristi.miloiu.3",
   },
-  { iconName: "fa fa-twitter", link: "https://twitter.com/" },
+  { iconName: "fa fa-instagram", link: "https://www.instagram.com/cristi_miloiu" },
+  { iconName: "fa fa-github", link: "https://github.com/cristim67" },
   {
-    iconName: "fa fa-youtube",
-    link: "https://www.youtube.com/",
+    iconName: "fa fa-linkedin",
+    link: "https://www.linkedin.com/in/cristi-miloiu-3a174a267/",
   },
-  { iconName: "fa fa-dribbble", link: "https://dribbble.com/" },
 ];
 
 const SocialComponent: React.FC = () => {

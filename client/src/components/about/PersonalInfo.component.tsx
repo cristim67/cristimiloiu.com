@@ -6,16 +6,14 @@ interface PersonalInfoItem {
 }
 
 const personalInfoContent: PersonalInfoItem[] = [
-  { meta: "first name", metaInfo: "Steve" },
-  { meta: "last name", metaInfo: "Milner" },
-  { meta: "Age", metaInfo: "27 Years" },
-  { meta: "Nationality", metaInfo: "Tunisian" },
-  { meta: "Freelance", metaInfo: "Available" },
-  { meta: "Address", metaInfo: "Tunis" },
-  { meta: "phone", metaInfo: "+21621184010" },
-  { meta: "Email", metaInfo: "you@mail.com" },
-  { meta: "Skype", metaInfo: " steve.milner" },
-  { meta: "langages", metaInfo: "French, English" },
+  { meta: "first name", metaInfo: "Cristi" },
+  { meta: "last name", metaInfo: "Miloiu" },
+  { meta: "Age", metaInfo: "21 Years" },
+  { meta: "Nationality", metaInfo: "Romanian" },
+  { meta: "Address", metaInfo: "Bucharest" },
+  { meta: "phone", metaInfo: "+40791423994" },
+  { meta: "Email", metaInfo: "miloiuc4@gmail.com" },
+  { meta: "languages", metaInfo: "English, French" },
 ];
 
 const PersonalInfo: React.FC = () => {

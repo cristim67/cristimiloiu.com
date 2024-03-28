@@ -7,14 +7,14 @@ interface SkillContent {
 }
 
 const skillsContent: SkillContent[] = [
-  { skillClass: "p25", skillPercent: "25", skillName: "HTML" },
-  { skillClass: "p89", skillPercent: "89", skillName: "JAVASCRIPT" },
-  { skillClass: "p70", skillPercent: "70", skillName: "CSS" },
-  { skillClass: "p66", skillPercent: "66", skillName: "PHP" },
-  { skillClass: "p95", skillPercent: "95", skillName: "WORDPRESS" },
-  { skillClass: "p50", skillPercent: "50", skillName: "JQUERY" },
-  { skillClass: "p65", skillPercent: "65", skillName: "ANGULAR" },
-  { skillClass: "p45", skillPercent: "45", skillName: "REACT" },
+  { skillClass: "p75", skillPercent: "75", skillName: "TYPESCRIPT" },
+  { skillClass: "p60", skillPercent: "60", skillName: "PYTHON" },
+  { skillClass: "p60", skillPercent: "60", skillName: "C/C++" },
+  { skillClass: "p45", skillPercent: "45", skillName: "GO" },
+  { skillClass: "p80", skillPercent: "80", skillName: "REACT" },
+  { skillClass: "p86", skillPercent: "86", skillName: "TAILWIND" },
+  { skillClass: "p75", skillPercent: "75", skillName: "POSTGRESQL" },
+  { skillClass: "p70", skillPercent: "70", skillName: "MONGO" },
 ];
 
 const Skills: React.FC = () => {

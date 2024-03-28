@@ -17,12 +17,11 @@ interface HeroContent {
 const heroContent: HeroContent = {
   heroImage: heroImg,
   heroMobileImage: heroImgMobile,
-  heroTitleName: "steve milner",
-  heroDesignation: "web designer",
-  heroDescriptions: `I'm a Tunisian based web designer & front‑end developer focused on
-  crafting clean & user‑friendly experiences, I am passionate about
-  building excellent software that improves the lives of those
-  around me.`,
+  heroTitleName: "cristi miloiu",
+  heroDesignation: "software engineer",
+  heroDescriptions: `I am a 3rd year student at the Faculty of Electronics, Telecommunications and Information Technology, within the Politehnica University of
+Bucharest. I am a persistent person, passionate about web development and artificial intelligence, who wants to contribute to the evolution
+of the communities he is a part of and is willing to learn new things.`,
   heroBtn: "more about me",
 };
 
@@ -38,9 +37,9 @@ const Hero: React.FC = () => {
       <div className="row home-details-container align-items-center">
         <div
           className="col-lg-4 bg position-fixed d-none d-lg-block"
-          // style={{
-          //   backgroundImage: `url(${process.env.PUBLIC_URL + heroContent.heroImage})`,
-          // }}
+          style={{
+            backgroundImage: `url(${heroContent.heroImage})`,
+          }}
         ></div>
         <div className="col-12 col-lg-8 offset-lg-4 home-details  text-center text-lg-start">
           <div>
@@ -51,7 +50,7 @@ const Hero: React.FC = () => {
             />
             <h1 className="text-uppercase poppins-font">
               I'm {heroContent.heroTitleName}.
-              <span>{heroContent.heroDesignation}</span>
+              <span style={{whiteSpace: "nowrap", marginBottom:"2rem"}}>{heroContent.heroDesignation}</span>
             </h1>
             <p className="open-sans-font">{heroContent.heroDescriptions}</p>
             <button className="button" onClick={toggleModalOne}>

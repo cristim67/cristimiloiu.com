@@ -4,8 +4,9 @@ import Education from "./Education.component.tsx";
 import Experience from "./Experience.component.tsx";
 import PersonalInfo from "./PersonalInfo.component.tsx";
 import Skills from "./Skills.component.tsx";
-import cv from "../../assets/img/cv.webp";
+import cv from "../../assets/CV_Miloiu_Cristi_en.pdf";
 import heroImgMobile from "../../assets/img/hero/img-mobile.jpg";
+import Volunteering from "./Volunteering.component.tsx";
 
 const Index: React.FC = () => {
   return (
@@ -55,9 +56,43 @@ const Index: React.FC = () => {
         </div>
         {/* End .row */}
 
-        <hr className="separator" />
+        <hr className="separator mt-1" />
 
+        {/* Experience & Education Starts */}
+        <div className="row">
+          <div className="col-12">
+            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
+              Education
+            </h3>
+            <div className="col-lg-12 m-15px-tb mb-3">
+              <div className="resume-box">
+                <Education />
+              </div>
+            </div>
+          </div>
+          <hr className="separator mt-1" />
+          <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
+            Experience
+          </h3>
+          <div className="col-lg-12 m-15px-tb">
+            <div className="resume-box">
+              <Experience />
+            </div>
+          </div>
+
+          <hr className="separator mt-1" />
+          <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
+            Volunteering
+          </h3>
+          <div className="col-lg-12 m-15px-tb">
+            <div className="resume-box">
+              <Volunteering />
+            </div>
+          </div>
+        </div>
+        {/*  Experience & Education Ends */}
         {/* Skills Starts */}
+        <hr className="separator mt-1" />
         <div className="row">
           <div className="col-12">
             <h3 className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">
@@ -67,28 +102,6 @@ const Index: React.FC = () => {
           <Skills />
         </div>
         {/* Skills Ends */}
-
-        <hr className="separator mt-1" />
-
-        {/* Experience & Education Starts */}
-        <div className="row">
-          <div className="col-12">
-            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">
-              Experience <span>&</span> Education
-            </h3>
-          </div>
-          <div className="col-lg-6 m-15px-tb">
-            <div className="resume-box">
-              <Experience />
-            </div>
-          </div>
-          <div className="col-lg-6 m-15px-tb">
-            <div className="resume-box">
-              <Education />
-            </div>
-          </div>
-        </div>
-        {/*  Experience & Education Ends */}
       </div>
     </section>
   );

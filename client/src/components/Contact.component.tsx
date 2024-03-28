@@ -1,49 +1,44 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Contact: React.FC = () => {
-  const form = useRef<HTMLFormElement>(null);
+const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (form.current) {
-      emailjs
-        .sendForm(
-          "service_n4mkhz9",
-          "template_ugoztxr",
-          form.current,
-          "user_vYmDSd9PwIuRXUQEDjYwN"
-        )
-        .then(
-          () => {
-            toast.success("Message Sent Successfully!", {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-            });
-            form.current!.reset();
-          },
-          () => {
-            toast.error("Ops Message Not Sent!", {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-            });
-          }
-        );
-    }
-  };
-
+    const formData = new FormData(form.current!);
+    fetch("https://formspree.io/f/xdoqwznj", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    })
+      .then(
+        () => {
+          toast.success("Message Sent Successfully!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+          form.current!.reset();
+        },
+        () => {
+          toast.error("Ops Message Not Sent!", {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      );
+ }
   return (
     <form id="myForm" className="contactform" ref={form} onSubmit={sendEmail}>
       <div className="row">

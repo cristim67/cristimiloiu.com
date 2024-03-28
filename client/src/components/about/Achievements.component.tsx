@@ -7,10 +7,10 @@ interface AchievementItem {
 }
 
 const achievementsContent: AchievementItem[] = [
-  { title: "12", subTitle1: "years of", subTitle2: "experience" },
-  { title: "97", subTitle1: "completed", subTitle2: "projects" },
-  { title: "81", subTitle1: "Happy", subTitle2: "customers" },
-  { title: "53", subTitle1: "awards", subTitle2: "won" },
+  { title: "1", subTitle1: "years of", subTitle2: "experience" },
+  { title: "50", subTitle1: "completed", subTitle2: "projects" },
+  { title: "500", subTitle1: "Happy", subTitle2: "users" },
+  { title: "2", subTitle1: "awards", subTitle2: "won" },
 ];
 
 const Achievements: React.FC = () => {

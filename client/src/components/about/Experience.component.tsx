@@ -3,31 +3,33 @@ import React from "react";
 interface ExperienceItem {
   year: string;
   position: string;
-  compnayName: string;
+  companyName: string;
   details: string;
 }
 
 const experienceContent: ExperienceItem[] = [
   {
-    year: "   2018 - Present",
-    position: " Web Developer",
-    compnayName: "Envato",
-    details: `  Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit`,
+    year: "September 2023 - prezent",
+    position: "Software Engineer",
+    companyName: "Genezio",
+    details: `I work on product development and improvement, contributing to the evolution of the project and supporting our community.
+I initiate and develop new functionality, thus contributing to the improvement of the tools and performing tests for them.`,
   },
   {
     year: "2013 - 2018",
-    position: " UI/UX Designer",
-    compnayName: "Themeforest",
-    details: `Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol
-        elit, tempor incididunt`,
+    position: "Full Stack Intern",
+    companyName: "Genezio",
+    details: `I designed and implemented a system based on a Large Language Model (LLM), using a GPT Chat model that we trained with the company’s
+documentation, allowing it to provide responses based on that documentation. This project involved the use of the JavaScript programming
+language and a framework called Langchain. Later, I was able to successfully integrate this pattern into a Discord bot, responsible for handling
+requests and providing responses via a webhook. Additionally, for the CI/CD (Continuous Integration/Continuous Deployment) aspects, I used
+CircleCI.`,
   },
   {
-    year: "2005 - 2013",
-    position: "Consultant",
-    compnayName: "Videohive",
-    details: `Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur
-        elit, sed do eiusmod tempor duntt`,
+    year: "July 2022 - October 2022",
+    position: "Intern System Engineer",
+    companyName: "HUAWEI ENTERPRISE ROMANIA GSC",
+    details: `During my internship, I learned about the different protocols of servers (x86) and storage systems (SAN and NAS)`,
   },
 ];
 
@@ -42,7 +44,7 @@ const Experience: React.FC = () => {
           <span className="time open-sans-font text-uppercase">{val.year}</span>
           <h5 className="poppins-font text-uppercase">
             {val.position}
-            <span className="place open-sans-font">{val.compnayName}</span>
+            <span className="place open-sans-font">{val.companyName}</span>
           </h5>
           <p className="open-sans-font">{val.details}</p>
         </li>
