@@ -18,11 +18,9 @@ Actively participating in all meetings of the Board of Directors`,
   },
   {
     year: "October 2022- October 2023",
-    rol: "Assistant Coordinator",
-    institute: "League of Electronics Students",
-    details: `As an Assistant Coordinator in the IT Department of the Electronic Students League, I worked with volunteers to develop several web applica‑
-tions, training them in the fundamentals of web programming. We covered languages  such as JavaScript, TypeScript, using the React frame‑
-work, Tailwind, as well as project management on the GitHub platform.`,
+    rol: "Student Advisor",
+    institute: "Faculty of Electronics, Telecommunications and Information Technology",
+    details: ``,
   },
 ];
 
@@ -39,7 +37,9 @@ const Volunteering: React.FC = () => {
             {val.rol}
             <p className=" open-sans-font">{val.institute}</p>
           </h5>
-          <p className="open-sans-font">{val.details}</p>
+          <p className="open-sans-font"
+             dangerouslySetInnerHTML={{ __html: val.details }}
+          />
         </li>
       ))}
     </ul>

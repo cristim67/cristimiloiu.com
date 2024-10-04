@@ -19,7 +19,7 @@ const heroContent: HeroContent = {
   heroMobileImage: heroImgMobile,
   heroTitleName: "cristi miloiu",
   heroDesignation: "software engineer",
-  heroDescriptions: `I am a 3rd year student at the Faculty of Electronics, Telecommunications and Information Technology, within the Politehnica University of
+  heroDescriptions: `I am a 4rd year student at the Faculty of Electronics, Telecommunications and Information Technology, within the Politehnica University of
 Bucharest. I am a persistent person, passionate about web development and artificial intelligence, who wants to contribute to the evolution
 of the communities he is a part of and is willing to learn new things.`,
   heroBtn: "more about me",

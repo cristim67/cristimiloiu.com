@@ -8,7 +8,7 @@ interface PersonalInfoItem {
 const personalInfoContent: PersonalInfoItem[] = [
   { meta: "first name", metaInfo: "Cristi" },
   { meta: "last name", metaInfo: "Miloiu" },
-  { meta: "Age", metaInfo: "21 Years" },
+  { meta: "Age", metaInfo: "22 Years" },
   { meta: "Nationality", metaInfo: "Romanian" },
   { meta: "Address", metaInfo: "Bucharest" },
   { meta: "phone", metaInfo: "+40791423994" },

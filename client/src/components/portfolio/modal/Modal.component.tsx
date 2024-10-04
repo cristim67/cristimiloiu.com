@@ -1,25 +1,12 @@
 import React from "react";
-import img1 from "../../../assets/img/portfolio/project-1.jpg";
-import img2 from "../../../assets/img/portfolio/project-2.jpg";
-import portfolioVideo from "../../../assets/img/portfolio/video.mp4";
 import CloseImg from "../../../assets/img/cancel.svg";
 import PortfolioData from "../portfolioData";
-import Slider from "react-slick";
 interface ModalProps {
   modalId: number;
   setGetModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Modal: React.FC<ModalProps> = ({ modalId, setGetModal }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    draggable: true,
-  };
-
   const closeModal = () => {
     setGetModal(false);
   };
@@ -31,7 +18,9 @@ const Modal: React.FC<ModalProps> = ({ modalId, setGetModal }) => {
         {PortfolioData.filter((item) => item.id === modalId).map((item) => {
           return (
             <div key={item.id} data-aos="fade">
+              <a href={item.modalDetails[0].github} target="_blank" rel="noopener noreferrer nofollow">
               <h2 className="heading mb-2">{item.type}</h2>
+              </a>
               <div className="modal__details">
                 {item.modalDetails.map((details, i) => (
                   <div key={i} className="row open-sans-font">
@@ -45,9 +34,11 @@ const Modal: React.FC<ModalProps> = ({ modalId, setGetModal }) => {
                     <div className="col-12 col-sm-6 mb-2">
                       <i className="fa fa-user-o pr-2"></i>
                       Client:{" "}
+                      <a href={details.clientLink} target="_blank" rel="noopener noreferrer nofollow">
                       <span className="ft-wt-600 uppercase">
                         {details.client}
                       </span>
+                      </a>
                     </div>
                     <div className="col-12 col-sm-6 mb-2">
                       <i className="fa fa-code pr-2"></i>
@@ -72,37 +63,9 @@ const Modal: React.FC<ModalProps> = ({ modalId, setGetModal }) => {
                 ))}
               </div>
               <figure className="modal__img">
-                {modalId === 2 ? (
-                  <iframe
-                    src="https://www.youtube.com/embed/7e90gBu4pas"
-                    title="YouTube video player"
-                    className="youtube-video"
-                    allowFullScreen
-                  ></iframe>
-                ) : modalId === 3 ? (
-                  <Slider {...settings}>
-                    <div>
-                      <img src={item.image} alt="portfolio project demo" />
-                    </div>
-                    <div>
-                      <img src={img1} alt="portfolio project demo" />
-                    </div>
-                    <div>
-                      <img src={img2} alt="portfolio project demo" />
-                    </div>
-                  </Slider>
-                ) : modalId === 4 ? (
-                  <video
-                    id="video"
-                    className="responsive-video"
-                    controls
-                    poster={item.image}
-                  >
-                    <source src={portfolioVideo} type="video/mp4" />
-                  </video>
-                ) : (
-                  <img src={item.image} alt="portfolio project demo" />
-                )}
+                 <a href={item.modalDetails[0].preview} target="_blank" rel="noopener noreferrer nofollow">
+                 <img src={item.image} alt="portfolio project demo" />
+                 </a>
               </figure>
               <button className="close-modal" onClick={closeModal}>
                 <img src={CloseImg} alt="portfolio project demo" />
