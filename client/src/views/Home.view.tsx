@@ -6,7 +6,7 @@ import Index from "../components/about";
 import Address from "../components/Address.component.tsx";
 import SocialComponent from "../components/Social.component.tsx";
 import Contact from "../components/Contact.component.tsx";
-// import Portfolio from "../components/portfolio/Portfolio.tsx";
+import Portfolio from "../components/portfolio/Portfolio.tsx";
 
 interface MenuItem {
   icon: string;
@@ -17,7 +17,7 @@ interface MenuItem {
 const menuItem: MenuItem[] = [
   { icon: "fa-home", menuName: "Home" },
   { icon: "fa-user", menuName: "About" },
-  // { icon: "fa-briefcase", menuName: "Portfolio" },
+  { icon: "fa-briefcase", menuName: "Portfolio" },
   { icon: "fa-envelope-open", menuName: "Contact" },
 ];
 
@@ -87,19 +87,19 @@ const Home: React.FC = () => {
               <Index />
             </div>
           </TabPanel>
-          {/*<TabPanel className="portfolio professional">*/}
-          {/*  <div*/}
-          {/*    className="title-section text-left text-sm-center"*/}
-          {/*    data-aos="fade-up"*/}
-          {/*    data-aos-duration="1200"*/}
-          {/*  >*/}
-          {/*    <h1>*/}
-          {/*      my <span>portfolio</span>*/}
-          {/*    </h1>*/}
-          {/*    <span className="title-bg">works</span>*/}
-          {/*  </div>*/}
-          {/*  <Portfolio />*/}
-          {/*</TabPanel>*/}
+          <TabPanel className="portfolio professional">
+            <div
+              className="title-section text-left text-sm-center"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              <h1>
+                my <span>portfolio</span>
+              </h1>
+              <span className="title-bg">works</span>
+            </div>
+            <Portfolio />
+          </TabPanel>
           <TabPanel className="contact">
             <div
               className="title-section text-left text-sm-center"

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { Tabs, TabList, TabPanel } from "react-tabs";
 import PortfolioData from "./portfolioData";
 import Modal from "./modal/Modal.component";
 
@@ -25,11 +25,6 @@ const Portfolio: React.FC = () => {
       <div className="portfolio-main">
         <Tabs>
           <TabList className="portfolio-tab-list" data-aos="fade-up">
-            <Tab>ALL</Tab>
-            <Tab>LOGO</Tab>
-            <Tab>VIDEO</Tab>
-            <Tab>GRAPHIC DESIGN</Tab>
-            <Tab>MOCKUP</Tab>
           </TabList>
 
           <div className="container">
