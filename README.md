@@ -1,3 +1,2 @@
-cristimiloiu.com - personal website 
-
+cristimiloiu.com
 
